@@ -11,20 +11,33 @@
 	<groupId>br.edu</groupId>
 	<artifactId>event-manager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>event-manager</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
+	<name>Event Manager API</name>
+	<description>This project is developed as part of a technical challenge for a Fullstack Developer role.
+		It focuses on managing events and providing CRUD functionalities (Create, Read, Update, Delete) for event records.
+		Built using Spring Boot, JPA, PostgreSQL, and integrated with Docker for containerization.</description>
+	<url>https://github.com/eduardoMichell/cognyte-challenge-api</url>
 	<licenses>
-		<license/>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+		</license>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<id>eduardoMichell</id>
+			<name>Eduardo Michell</name>
+			<email>eduardo.souza1823@gmail.com</email>
+			<organization>Cognyte</organization>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
 	</developers>
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:https://github.com/eduardoMichell/cognyte-challenge-api.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:eduardoMichell/cognyte-challenge-api.git</developerConnection>
+		<url>https://github.com/eduardoMichell/cognyte-challenge-api</url>
+		<tag>HEAD</tag>
 	</scm>
 	<properties>
 		<java.version>17</java.version>
@@ -62,6 +75,32 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.9.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>4.6.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mockito</groupId>
+					<artifactId>mockito-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

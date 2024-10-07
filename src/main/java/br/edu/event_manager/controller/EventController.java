@@ -15,8 +15,11 @@ import java.util.Map;
 @CrossOrigin(origins = "${cors.allowed.origins}")
 public class EventController {
 
-    @Autowired
-    private EventService eventService;
+    private final EventService eventService;
+
+    public EventController(EventService eventService) {
+        this.eventService = eventService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Event>> getAllEvents() {
